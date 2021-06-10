@@ -1,0 +1,101 @@
+<div class="imgae">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="jumbostron bg-danger text-white text-center">
+    <h1 class="display-4">Corona Covid-19 Tracker</h1>
+    <!-- new datat -->
+    <div class="mx-auto">
+        <div class="form-group col-lg-5 mx-auto">
+            <label for="c">Select Country</label>
+            <select class="form-control" (change)="getcoutery(Desh)" #Desh>
+                <option value="india">India</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="srilanka">Srilanka</option>
+                <option value="nepal">Nepal</option>
+                <option value="china">China</option>
+                <option value="afghanistan">Afghanistan</option>
+                <option value="bhutan">Bhutan</option>
+                <option value="pakistan">Pakistan</option>
+
+            </select>
+        </div>
+    </div>
+    <!-- purna data -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="graidcolor1">Active
+                    <hr>{{totalactivecases}}
+                </h1>
+            </div>
+            <div class="col">
+                <h1 class="graidcolor2">Confirmed
+                    <hr>{{Confirmed}}
+                </h1>
+
+            </div>
+            <div class="col">
+                <h1 class="graidcolor3">Deaths
+                    <hr>{{Deaths}}
+                </h1>
+            </div>
+            <div class="col">
+                <h1 class="graidcolor4">Recovered
+                    <hr>{{Confirmed}}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <google-chart [data]="pieChart" *ngIf="isgooglechartready"></google-chart>
+    </div>
+    <div class="col">
+        <p>This is my chart</p>
+        <div id="divChart">
+            <!-- <canvas id="myChart"></canvas> -->
+        </div>
+
+
+    </div>
+</div>
+
+<!-- deafoltdata -->
+<div class="row">
+    <div class="col">
+        <div class="p-3 m-3 card">
+            <div class="ui statistic">
+                <div class="label">
+                    <p>{{Country}}</p>
+                </div>
+                <div class="value">
+                    {{totalactivecases}}
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <a href="https://mdbootstrap.com/"> By Satish Gautam</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
