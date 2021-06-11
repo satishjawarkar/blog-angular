@@ -1,15 +1,18 @@
 <div class="imgae">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
 </div>
-<div class="jumbostron bg-danger text-white text-center">
+<div class="jumbostron bg-danger text-white text-center mb-6">
     <h1 class="display-4">Corona Covid-19 Tracker</h1>
     <!-- new datat -->
     <div class="mx-auto">
@@ -28,47 +31,36 @@
             </select>
         </div>
     </div>
-    <!-- purna data -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="graidcolor1">Active
-                    <hr>{{totalactivecases}}
-                </h1>
-            </div>
-            <div class="col">
-                <h1 class="graidcolor2">Confirmed
-                    <hr>{{Confirmed}}
-                </h1>
-
-            </div>
-            <div class="col">
-                <h1 class="graidcolor3">Deaths
-                    <hr>{{Deaths}}
-                </h1>
-            </div>
-            <div class="col">
-                <h1 class="graidcolor4">Recovered
-                    <hr>{{Confirmed}}
-                </h1>
-            </div>
-        </div>
-    </div>
-
 </div>
-<hr>
-<div class="row">
-    <div class="col">
-        <google-chart [data]="pieChart" *ngIf="isgooglechartready"></google-chart>
-    </div>
-    <div class="col">
-        <p>This is my chart</p>
-        <div id="divChart">
-            <!-- <canvas id="myChart"></canvas> -->
+<!-- purna data -->
+<!-- <div class="container"> -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col bg-warning">Active
+            <hr>{{totalactivecases}}
         </div>
-
-
+        <div class="col bg-primary">Confirmed
+            <hr>{{Confirmed}}
+        </div>
+        <div class="col bg-danger">Deaths
+            <hr>{{Deaths}}
+        </div>
+        <div class="col bg-success">Recovered
+            <hr>{{Confirmed}}
+        </div>
     </div>
+    <!-- <div class="row">
+              <div class="col-8">col-8</div>
+              <div class="col-4">col-4</div>
+            </div> -->
+</div>
+<!-- </div> -->
+
+
+<hr>
+<div class="container ">
+    <!-- <div class="col"> -->
+    <google-chart [data]="pieChart" *ngIf="isgooglechartready"></google-chart>
 </div>
 
 <!-- deafoltdata -->
@@ -92,7 +84,7 @@
 <footer class="page-footer font-small blue">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <div class="footer-copyright text-center py-3 bg-dark">© 2021 Copyright:
         <a href="https://mdbootstrap.com/"> By Satish Gautam</a>
     </div>
     <!-- Copyright -->
